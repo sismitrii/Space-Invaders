@@ -1,0 +1,50 @@
+.grille {
+    display :flex;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 500px;
+    border : 1px solid black;
+    margin: 0 auto;
+    box-shadow: 15px 15px 5px rgba(0, 0, 0, 0.2);
+    background: url("ressources/background-black.png");
+    animation: defilement 5s linear infinite;
+}
+
+h3 {
+    text-align: center;
+    margin: 20px 0;
+}
+.grille div {
+    width: 25px;
+    height: 25px;
+    margin-bottom:15px;
+}
+
+.alien {
+    background: url(ressources/ennemies.png);
+    background-position: center;
+    background-size: contain ;
+}
+
+.vaisseau {
+    background: url(ressources/vaisseau.png);
+    transform: rotate(180deg);
+    background-position: center;
+    background-size:contain ;
+}
+.shot {
+    background-color: orange;
+}
+
+.boom {
+    background-color: red;
+}
+
+@keyframes defilement {
+    from {
+        background-position-y: 0px;
+    }
+    to {
+        background-position-y: 256px;
+    }
+}
